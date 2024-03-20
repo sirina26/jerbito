@@ -16,7 +16,8 @@ List.hd(List.rev[1;2;3;4;5]);;
 
 let swap ma_liste = match ma_liste with
 | [] -> [] 
-| t :: y :: test -> y :: t :: test;;
+| [x] -> [x]
+| x :: y :: test -> y :: x :: test;;
 
 (* appelle fonction *)
 let result = swap[1; 2; 3; 4; 5];;
@@ -63,5 +64,9 @@ match lst1 with
 | x :: xs -> x :: append xs lst2
 
 (* Question 7 *)
+(* flat : 'a list list -> 'a list *)
+let rec flat lst = 
+match lst3 with
+;;
 (* Question 13 *)
 Definir decr_list : int list -> int list
